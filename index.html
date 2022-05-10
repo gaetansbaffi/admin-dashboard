@@ -12,29 +12,33 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@6.6.96/css/materialdesignicons.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div id="container">
       <nav>
         <div class="logo">
-          <img src="" alt="" />
+          <span class="mdi mdi-view-dashboard dashboard"></span>
           <h2>Dashboard</h2>
         </div>
         <ul class="btns">
           <div class="first">
             <ul>
               <div class="generalPages">
-                <li>Home</li>
-                <li>Profil</li>
-                <li>Messages</li>
-                <li>History</li>
-                <li>Tasks</li>
-                <li>Communities</li>
+                <li><span class="mdi mdi-home"></span>Home</li>
+                <li><span class="mdi mdi-account"></span>Profil</li>
+                <li><span class="mdi mdi-message"></span>Messages</li>
+                <li><span class="mdi mdi-clock"></span>History</li>
+                <li><span class="mdi mdi-note-multiple"></span>Tasks</li>
+                <li><span class="mdi mdi-account-group"></span>Communities</li>
               </div>
               <div class="supportPages">
-                <li>Settings</li>
-                <li>Support</li>
-                <li>Privacy</li>
+                <li><span class="mdi mdi-cog"></span>Settings</li>
+                <li><span class="mdi mdi-help-circle"></span>Support</li>
+                <li><span class="mdi mdi-check"></span>Privacy</li>
               </div>
             </ul>
           </div>
@@ -42,23 +46,32 @@
       </nav>
       <main>
         <header>
-          <div class="topLeft">
-            <img src="" alt="" class="searchBtn" />
-            <input type="text" />
-          </div>
-          <div class="topRight">
-            <img src="" alt="" class="bell" /><img
-              src=""
-              alt=""
-              class="logoSmall"
-            />
-            <h3>Morgan Oakley</h3>
+          <div class="top">
+            <div class="topLeft">
+              <span class="mdi mdi-magnify"></span>
+              <input type="text" />
+            </div>
+            <div class="topRight">
+              <span class="mdi mdi-bell"></span>
+              <img
+                src="https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/b7/b79ae6aff090ccf583380d61f2b8a5c7ba97aa6a_full.jpg"
+                alt=""
+                class="avatar"
+              />
+              <h3>Morgan Oakley</h3>
+            </div>
           </div>
           <div class="bottom">
             <div class="welcome">
-              <img src="" alt="" class="avatar" />
-              <p>hi there,</p>
-              <h2>Morgan Oakley (@morgan)</h2>
+              <img
+                src="https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/b7/b79ae6aff090ccf583380d61f2b8a5c7ba97aa6a_full.jpg"
+                alt=""
+                class="avatar"
+              />
+              <div class="welcomeText">
+                <p>hi there,</p>
+                <h2>Morgan Oakley (@morgan)</h2>
+              </div>
             </div>
             <div class="actionBtns">
               <button>New</button><button>Upload</button><button>Share</button>
@@ -69,87 +82,75 @@
           <section class="projects">
             <h3>Your Projects</h3>
             <div class="card">
-              <h4>Lorem, ipsum dolor.</h4>
+              <h4>Super Cool Project</h4>
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit
                 quibusdam veniam nam ipsum. Molestias, et.
               </p>
-              <div>
-                <img src="" alt="" class="star" /><img
-                  src=""
-                  alt=""
-                  class="eye"
-                /><img src="" alt="" class="share" />
+              <div class="cardLogos">
+                <span class="mdi mdi-star"></span>
+                <span class="mdi mdi-eye"></span>
+                <span class="mdi mdi-link"></span>
               </div>
             </div>
             <div class="card">
-              <h4>Lorem, ipsum dolor.</h4>
+              <h4>Les Cool Project</h4>
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit
                 quibusdam veniam nam ipsum. Molestias, et.
               </p>
-              <div>
-                <img src="" alt="" class="star" /><img
-                  src=""
-                  alt=""
-                  class="eye"
-                /><img src="" alt="" class="share" />
+              <div class="cardLogos">
+                <span class="mdi mdi-star"></span>
+                <span class="mdi mdi-eye"></span>
+                <span class="mdi mdi-link"></span>
               </div>
             </div>
             <div class="card">
-              <h4>Lorem, ipsum dolor.</h4>
+              <h4>Impossible App</h4>
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit
                 quibusdam veniam nam ipsum. Molestias, et.
               </p>
-              <div>
-                <img src="" alt="" class="star" /><img
-                  src=""
-                  alt=""
-                  class="eye"
-                /><img src="" alt="" class="share" />
+              <div class="cardLogos">
+                <span class="mdi mdi-star"></span>
+                <span class="mdi mdi-eye"></span>
+                <span class="mdi mdi-link"></span>
               </div>
             </div>
             <div class="card">
-              <h4>Lorem, ipsum dolor.</h4>
+              <h4>Easy Peasy App</h4>
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit
                 quibusdam veniam nam ipsum. Molestias, et.
               </p>
-              <div>
-                <img src="" alt="" class="star" /><img
-                  src=""
-                  alt=""
-                  class="eye"
-                /><img src="" alt="" class="share" />
+              <div class="cardLogos">
+                <span class="mdi mdi-star"></span>
+                <span class="mdi mdi-eye"></span>
+                <span class="mdi mdi-link"></span>
               </div>
             </div>
             <div class="card">
-              <h4>Lorem, ipsum dolor.</h4>
+              <h4>Ad blocker</h4>
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit
                 quibusdam veniam nam ipsum. Molestias, et.
               </p>
-              <div>
-                <img src="" alt="" class="star" /><img
-                  src=""
-                  alt=""
-                  class="eye"
-                /><img src="" alt="" class="share" />
+              <div class="cardLogos">
+                <span class="mdi mdi-star"></span>
+                <span class="mdi mdi-eye"></span>
+                <span class="mdi mdi-link"></span>
               </div>
             </div>
             <div class="card">
-              <h4>Lorem, ipsum dolor.</h4>
+              <h4>Money Maker</h4>
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit
                 quibusdam veniam nam ipsum. Molestias, et.
               </p>
-              <div>
-                <img src="" alt="" class="star" /><img
-                  src=""
-                  alt=""
-                  class="eye"
-                /><img src="" alt="" class="share" />
+              <div class="cardLogos">
+                <span class="mdi mdi-star"></span>
+                <span class="mdi mdi-eye"></span>
+                <span class="mdi mdi-link"></span>
               </div>
             </div>
           </section>
@@ -158,21 +159,21 @@
               <h3>Announcements</h3>
               <div class="posts">
                 <div class="post">
-                  <h5>Lorem, ipsum.</h5>
+                  <h5>Site Maintenance</h5>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Dolores ut perferendis sunt, laudantium sequi nihil.
                   </p>
                 </div>
                 <div class="post">
-                  <h5>Lorem, ipsum.</h5>
+                  <h5>Community Share Day</h5>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Dolores ut perferendis sunt, laudantium sequi nihil.
                   </p>
                 </div>
                 <div class="post">
-                  <h5>Lorem, ipsum.</h5>
+                  <h5>Updated Privacy Policy</h5>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Dolores ut perferendis sunt, laudantium sequi nihil.
@@ -185,30 +186,46 @@
               <div class="users">
                 <div class="usersContainer">
                   <div class="user">
-                    <img src="" alt="" class="avatar" />
+                    <img
+                      src="https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/b7/b79ae6aff090ccf583380d61f2b8a5c7ba97aa6a_full.jpg"
+                      alt=""
+                      class="avatar"
+                    />
                     <div class="userInfo">
-                      <p class="name">@lorem</p>
+                      <p class="name">@Morgan</p>
                       <p class="description">Lorem ipsum dolor sit amet.</p>
                     </div>
                   </div>
                   <div class="user">
-                    <img src="" alt="" class="avatar" />
+                    <img
+                      src="https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/b7/b7a5d1525189038a91262c400f25d456952d427d_full.jpg"
+                      alt=""
+                      class="avatar"
+                    />
                     <div class="userInfo">
-                      <p class="name">@lorem</p>
+                      <p class="name">@Negan</p>
                       <p class="description">Lorem ipsum dolor sit amet.</p>
                     </div>
                   </div>
                   <div class="user">
-                    <img src="" alt="" class="avatar" />
+                    <img
+                      src="https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/b7/b7ab39aa272cd1544bf7ede630785eee61a41117_full.jpg"
+                      alt=""
+                      class="avatar"
+                    />
                     <div class="userInfo">
-                      <p class="name">@lorem</p>
+                      <p class="name">@Rick</p>
                       <p class="description">Lorem ipsum dolor sit amet.</p>
                     </div>
                   </div>
                   <div class="user">
-                    <img src="" alt="" class="avatar" />
+                    <img
+                      src="https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/b7/b7aaba6e4d2d98ac7e0853c1151322f64ada24aa_full.jpg"
+                      alt=""
+                      class="avatar"
+                    />
                     <div class="userInfo">
-                      <p class="name">@lorem</p>
+                      <p class="name">@Carl</p>
                       <p class="description">Lorem ipsum dolor sit amet.</p>
                     </div>
                   </div>

@@ -152,8 +152,14 @@ header {
   left: 0;
 
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   background: #e1e7ed;
+}
+
+.avatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
 }
 /* Nav */
 nav {
@@ -164,7 +170,15 @@ nav {
 }
 
 .logo {
-  padding: 0 20px 20px 0;
+  padding: 25px 20px 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo span {
+  font-size: 2rem;
+  color: white;
 }
 
 nav h2 {
@@ -181,10 +195,14 @@ li {
   font-weight: bold;
   padding: 5px 0;
 }
+
 li:hover {
   cursor: pointer;
 }
 
+li span {
+  padding-right: 10px;
+}
 /* Main */
 main {
   display: flex;
@@ -196,7 +214,6 @@ header {
   display: flex;
   flex-direction: column;
   background-color: white;
-
   flex-wrap: nowrap;
 }
 
@@ -221,6 +238,29 @@ header button {
 button:hover {
   cursor: pointer;
 }
+.top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.topLeft,
+.topRight {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 0;
+}
+.topLeft {
+  flex-grow: 1;
+}
+.topRight {
+  flex-grow: 0;
+  padding-right: 40px;
+}
+.topRight h3 {
+  display: inline;
+}
 
 .bottom {
   display: flex;
@@ -228,6 +268,21 @@ button:hover {
   align-items: center;
 }
 
+.welcome {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bell {
+  font-size: 30px;
+}
+
+.welcomeText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 .sectionContainer {
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -238,9 +293,9 @@ button:hover {
 .projects {
   display: grid;
   grid-template-rows: auto 1fr 1fr;
-  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 2fr));
   grid-auto-rows: 1fr;
-  gap: 15px;
+  gap: 30px;
 }
 
 .projects h3 {
@@ -249,7 +304,14 @@ button:hover {
 .card {
   background-color: white;
   border-left: 5px solid #e7b73a;
-  padding: 10px;
+  padding: 40px;
+}
+
+.cardLogos {
+  display: flex;
+  justify-content: end;
+  font-size: 1.3rem;
+  gap: 25px;
 }
 
 .sidebar {
@@ -265,7 +327,7 @@ button:hover {
 }
 
 .posts {
-  margin-top: 15px;
+  margin-top: 30px;
 }
 
 .users {
@@ -273,7 +335,10 @@ button:hover {
 }
 
 .user {
-  padding: 5px 0;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
 }
 
 .card {
@@ -281,7 +346,7 @@ button:hover {
 }
 
 .post {
-  padding: 10px;
+  padding: 20px;
   border-bottom: 2px solid #e1e7ed;
   border-bottom-width: 50%;
 }
