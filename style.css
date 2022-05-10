@@ -169,6 +169,11 @@ nav {
   flex-grow: 0;
 }
 
+.mdi-magnify,
+.mdi-bell {
+  font-size: 1.5rem;
+}
+
 .logo {
   padding: 25px 20px 20px 0;
   display: flex;
@@ -336,9 +341,15 @@ button:hover {
 
 .user {
   padding: 10px;
+  margin: 0 30px;
   display: flex;
   align-items: center;
   gap: 0 10px;
+}
+
+.name {
+  font-weight: 500;
+  margin-bottom: 5px;
 }
 
 .card {
