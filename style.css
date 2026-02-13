@@ -1,381 +1,144 @@
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
 }
 
-/** my css starts here */
-/* global */
 :root {
-  font-family: "Roboto", sans-serif;
+  font-family: "Inter", sans-serif;
+  color: #0f172a;
+  background: #f8fafc;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: bold;
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top right, #dbeafe, #f8fafc 45%);
+}
+
+.app {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 2rem 1.2rem 3rem;
+}
+
+.hero {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid #dbe3ef;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: #e0e7ff;
+  color: #4338ca;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+}
+
+h1 {
+  font-size: clamp(1.7rem, 4vw, 2.6rem);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  color: #334155;
+  line-height: 1.6;
+  max-width: 75ch;
+}
+
+.actions {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 0.8rem 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.primary {
+  background: #2563eb;
+  color: white;
+}
+
+.ghost {
+  border: 1px solid #bfdbfe;
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+main {
+  margin-top: 1.2rem;
+  display: grid;
+  gap: 1.2rem;
+}
+
+.panel {
+  background: white;
+  border-radius: 16px;
+  border: 1px solid #dbe3ef;
+  padding: 1.5rem;
 }
 
 h2 {
-  font-size: 1.7rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
 }
 
-header {
-  padding: 15px 50px;
-}
-
-.projects {
-  padding: 15px 30px;
-}
-
-#container {
-  display: flex;
-  position: absolute;
-  padding: 0;
-  margin: 0;
-
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  min-height: 100%;
-  background: #e1e7ed;
-}
-
-.avatar {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-}
-/* Nav */
-nav {
-  padding: 0 15px;
-  background: #1992d4;
-  width: 300px;
-  flex-grow: 0;
-}
-
-.mdi-magnify,
-.mdi-bell {
-  font-size: 1.5rem;
-}
-
-.logo {
-  padding: 25px 20px 20px 0;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo span {
-  font-size: 2rem;
-  color: white;
-}
-
-nav h2 {
-  color: white;
-  font-size: 1.5rem;
-}
-
-ul div {
-  margin: 25px 0;
-}
-
-li {
-  color: white;
-  font-weight: bold;
-  padding: 5px 0;
-}
-
-li:hover {
-  cursor: pointer;
-}
-
-li span {
-  padding-right: 10px;
-}
-/* Main */
-main {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-
-header {
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  flex-wrap: nowrap;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
-}
-
-input {
-  background-color: #e1e7ed;
-  border: none;
-  padding: 5px;
-  border-radius: 20px;
-  width: 50%;
-}
-
-header button {
-  width: 100px;
-  height: 35px;
-  margin: 0 20px;
-  border-radius: 20px;
-  background-color: #1992d4;
-  border: none;
-  color: white;
-  font-weight: bold;
-}
-button:hover {
-  cursor: pointer;
-}
-.top {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-
-.topLeft,
-.topRight {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  padding: 10px 0;
-}
-.topLeft {
-  flex-grow: 1;
-}
-.topRight {
-  flex-grow: 0;
-  padding-right: 40px;
-}
-.topRight h3 {
-  display: inline;
-}
-
-.bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.welcome {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.bell {
-  font-size: 30px;
-}
-
-.welcomeText {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.sectionContainer {
+.steps {
   display: grid;
-  grid-template-columns: 3fr 1fr;
-  grid-auto-rows: 1fr;
-  flex-grow: 1;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
 }
 
-.projects {
-  display: grid;
-  grid-template-rows: auto 1fr 1fr;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 2fr));
-  grid-auto-rows: 1fr;
-  gap: 15px 25px;
-}
-
-.projects h3 {
-  grid-column: 1 /-1;
-}
 .card {
-  background-color: white;
-  border-left: 5px solid #e7b73a;
-  padding: 40px;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1rem;
 }
 
-.cardLogos {
-  display: flex;
-  justify-content: end;
+.icon {
   font-size: 1.3rem;
-  gap: 25px;
+  color: #2563eb;
 }
 
-.sidebar {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 15px 15px 15px 30px;
+h3 {
+  margin: 0.5rem 0;
 }
 
-.posts {
-  margin-top: 15px;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+.card p,
+.list {
+  color: #334155;
+  line-height: 1.5;
 }
 
-.trending {
-  margin-top: 15px;
+.split {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.4rem;
 }
 
-.users {
-  background: white;
-  margin-top: 15px;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+.list {
+  list-style: none;
 }
 
-.user {
-  padding: 10px;
-  margin: 0 30px;
-  display: flex;
-  align-items: center;
-  gap: 0 10px;
+.list li {
+  padding: 0.45rem 0;
+  border-bottom: 1px dashed #e2e8f0;
 }
 
-.name {
-  font-weight: 500;
-  margin-bottom: 5px;
-}
-
-.card {
-  border-radius: 10px;
-}
-
-.post {
-  padding: 20px;
-  border-bottom: 2px solid #e1e7ed;
-  border-bottom-width: 50%;
-}
-
-.post,
-.userInfo,
-.user {
-  background: white;
+.list li:last-child {
+  border-bottom: none;
 }
