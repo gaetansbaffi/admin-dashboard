@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin Dashboard</title>
+    <title>Générateur de leçons PDF</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -18,220 +18,78 @@
     />
   </head>
   <body>
-    <div id="container">
-      <nav>
-        <div class="logo">
-          <span class="mdi mdi-view-dashboard dashboard"></span>
-          <h2>Dashboard</h2>
+    <div class="app">
+      <header class="hero">
+        <p class="badge">Outil pédagogique</p>
+        <h1>Transformez un PDF en leçons prêtes à intégrer</h1>
+        <p class="subtitle">
+          Analyse automatique des contenus de cours, extraction des idées clés,
+          suppression des éléments non pédagogiques et génération de modules
+          structurés pour votre plateforme d'apprentissage.
+        </p>
+        <div class="actions">
+          <button class="primary">Importer un PDF</button>
+          <button class="ghost">Voir un exemple</button>
         </div>
-        <ul class="btns">
-          <div class="first">
-            <ul>
-              <div class="generalPages">
-                <li><span class="mdi mdi-home"></span>Home</li>
-                <li><span class="mdi mdi-account"></span>Profil</li>
-                <li><span class="mdi mdi-message"></span>Messages</li>
-                <li><span class="mdi mdi-clock"></span>History</li>
-                <li><span class="mdi mdi-note-multiple"></span>Tasks</li>
-                <li><span class="mdi mdi-account-group"></span>Communities</li>
-              </div>
-              <div class="supportPages">
-                <li><span class="mdi mdi-cog"></span>Settings</li>
-                <li><span class="mdi mdi-help-circle"></span>Support</li>
-                <li><span class="mdi mdi-check"></span>Privacy</li>
-              </div>
+      </header>
+
+      <main>
+        <section class="panel">
+          <h2>Pipeline d'analyse</h2>
+          <div class="steps">
+            <article class="card">
+              <span class="mdi mdi-file-document-outline icon"></span>
+              <h3>1. Ingestion</h3>
+              <p>
+                Détection de la langue, OCR si nécessaire et segmentation du
+                document par pages, titres et blocs.
+              </p>
+            </article>
+            <article class="card">
+              <span class="mdi mdi-table-of-contents icon"></span>
+              <h3>2. Structure</h3>
+              <p>
+                Exploite le sommaire lorsqu'il existe. Sinon, reconstruit les
+                leçons à partir des en-têtes, transitions et concepts.
+              </p>
+            </article>
+            <article class="card">
+              <span class="mdi mdi-filter-variant icon"></span>
+              <h3>3. Nettoyage</h3>
+              <p>
+                Filtre les mentions inutiles : droits d'utilisation, pages de
+                garde, avertissements légaux et répétitions hors contenu.
+              </p>
+            </article>
+            <article class="card">
+              <span class="mdi mdi-school-outline icon"></span>
+              <h3>4. Génération</h3>
+              <p>
+                Produit des leçons courtes, objectifs d'apprentissage,
+                prérequis, quiz rapides et résumé exportable (JSON/Markdown).
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel split">
+          <div>
+            <h2>Entrée détectée</h2>
+            <ul class="list">
+              <li><strong>Type:</strong> PDF pédagogique mixte</li>
+              <li><strong>Sommaire:</strong> optionnel</li>
+              <li><strong>Organisation:</strong> chapitres ou leçons en vrac</li>
+              <li><strong>Niveau:</strong> configurable (débutant à avancé)</li>
             </ul>
           </div>
-        </ul>
-      </nav>
-      <main>
-        <header>
-          <div class="top">
-            <div class="topLeft">
-              <span class="mdi mdi-magnify"></span>
-              <input type="text" />
-            </div>
-            <div class="topRight">
-              <span class="mdi mdi-bell"></span>
-              <img
-                src="https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/b7/b79ae6aff090ccf583380d61f2b8a5c7ba97aa6a_full.jpg"
-                alt=""
-                class="avatar"
-              />
-              <h3>Morgan Oakley</h3>
-            </div>
-          </div>
-          <div class="bottom">
-            <div class="welcome">
-              <img
-                src="https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/b7/b79ae6aff090ccf583380d61f2b8a5c7ba97aa6a_full.jpg"
-                alt=""
-                class="avatar"
-              />
-              <div class="welcomeText">
-                <p>hi there,</p>
-                <h2>Morgan Oakley (@morgan)</h2>
-              </div>
-            </div>
-            <div class="actionBtns">
-              <button>New</button><button>Upload</button><button>Share</button>
-            </div>
-          </div>
-        </header>
-        <section class="sectionContainer">
-          <section class="projects">
-            <h3>Your Projects</h3>
-            <div class="card">
-              <h4>Super Cool Project</h4>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit
-                quibusdam veniam nam ipsum. Molestias, et.
-              </p>
-              <div class="cardLogos">
-                <span class="mdi mdi-star"></span>
-                <span class="mdi mdi-eye"></span>
-                <span class="mdi mdi-link"></span>
-              </div>
-            </div>
-            <div class="card">
-              <h4>Les Cool Project</h4>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit
-                quibusdam veniam nam ipsum. Molestias, et.
-              </p>
-              <div class="cardLogos">
-                <span class="mdi mdi-star"></span>
-                <span class="mdi mdi-eye"></span>
-                <span class="mdi mdi-link"></span>
-              </div>
-            </div>
-            <div class="card">
-              <h4>Impossible App</h4>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit
-                quibusdam veniam nam ipsum. Molestias, et.
-              </p>
-              <div class="cardLogos">
-                <span class="mdi mdi-star"></span>
-                <span class="mdi mdi-eye"></span>
-                <span class="mdi mdi-link"></span>
-              </div>
-            </div>
-            <div class="card">
-              <h4>Easy Peasy App</h4>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit
-                quibusdam veniam nam ipsum. Molestias, et.
-              </p>
-              <div class="cardLogos">
-                <span class="mdi mdi-star"></span>
-                <span class="mdi mdi-eye"></span>
-                <span class="mdi mdi-link"></span>
-              </div>
-            </div>
-            <div class="card">
-              <h4>Ad blocker</h4>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit
-                quibusdam veniam nam ipsum. Molestias, et.
-              </p>
-              <div class="cardLogos">
-                <span class="mdi mdi-star"></span>
-                <span class="mdi mdi-eye"></span>
-                <span class="mdi mdi-link"></span>
-              </div>
-            </div>
-            <div class="card">
-              <h4>Money Maker</h4>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit
-                quibusdam veniam nam ipsum. Molestias, et.
-              </p>
-              <div class="cardLogos">
-                <span class="mdi mdi-star"></span>
-                <span class="mdi mdi-eye"></span>
-                <span class="mdi mdi-link"></span>
-              </div>
-            </div>
-          </section>
-          <div class="sidebar">
-            <section class="announcements">
-              <h3>Announcements</h3>
-              <div class="posts">
-                <div class="post">
-                  <h5>Site Maintenance</h5>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Dolores ut perferendis sunt, laudantium sequi nihil.
-                  </p>
-                </div>
-                <div class="post">
-                  <h5>Community Share Day</h5>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Dolores ut perferendis sunt, laudantium sequi nihil.
-                  </p>
-                </div>
-                <div class="post">
-                  <h5>Updated Privacy Policy</h5>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Dolores ut perferendis sunt, laudantium sequi nihil.
-                  </p>
-                </div>
-              </div>
-            </section>
-            <section class="trending">
-              <h3>Trending</h3>
-              <div class="users">
-                <div class="usersContainer">
-                  <div class="user">
-                    <img
-                      src="https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/b7/b79ae6aff090ccf583380d61f2b8a5c7ba97aa6a_full.jpg"
-                      alt=""
-                      class="avatar"
-                    />
-                    <div class="userInfo">
-                      <p class="name">@Morgan</p>
-                      <p class="description">Super Cool Project</p>
-                    </div>
-                  </div>
-                  <div class="user">
-                    <img
-                      src="https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/b7/b7a5d1525189038a91262c400f25d456952d427d_full.jpg"
-                      alt=""
-                      class="avatar"
-                    />
-                    <div class="userInfo">
-                      <p class="name">@Negan</p>
-                      <p class="description">World Peace Builder</p>
-                    </div>
-                  </div>
-                  <div class="user">
-                    <img
-                      src="https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/b7/b7ab39aa272cd1544bf7ede630785eee61a41117_full.jpg"
-                      alt=""
-                      class="avatar"
-                    />
-                    <div class="userInfo">
-                      <p class="name">@Rick</p>
-                      <p class="description">Life Changing App</p>
-                    </div>
-                  </div>
-                  <div class="user">
-                    <img
-                      src="https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/b7/b7aaba6e4d2d98ac7e0853c1151322f64ada24aa_full.jpg"
-                      alt=""
-                      class="avatar"
-                    />
-                    <div class="userInfo">
-                      <p class="name">@Carl</p>
-                      <p class="description">No traffic Maker</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
+          <div>
+            <h2>Sortie générée</h2>
+            <ul class="list">
+              <li>Plan de cours harmonisé</li>
+              <li>Leçons modulaires (5-12 min)</li>
+              <li>Points clés et vocabulaire</li>
+              <li>Exercices et questions d'évaluation</li>
+            </ul>
           </div>
         </section>
       </main>

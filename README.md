@@ -1,6 +1,12 @@
-# admin-dashboard
+# Générateur de leçons PDF (UI de démonstration)
 
-Admin Dashboard project from The Odin Project
-Subject, grid and flex.
+Interface front-end statique présentant un outil qui :
 
-Live preview > https://gaetansbaffi.github.io/admin-dashboard/
+- analyse un PDF à contenu pédagogique,
+- reconstruit des leçons même en absence de sommaire,
+- filtre les contenus inutiles (droits d'utilisation, mentions légales, pages parasites),
+- génère des modules prêts pour une plateforme d'apprentissage.
+
+## Lancer localement
+
+Ouvrir `index.html` dans un navigateur.
